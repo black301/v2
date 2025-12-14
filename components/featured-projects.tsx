@@ -43,7 +43,7 @@ const featuredProjects = [
     date: "2023",
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80",
-    badge: { ar: "منجز", en: "Completed" },
+    badge: { ar: "مميز", en: "Featured" },
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const featuredProjects = [
     date: "2024",
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
-    badge: { ar: "جاري التنفيذ", en: "In Progress" },
+    badge: { ar: "مميز", en: "Featured" },
   },
   {
     id: 4,
@@ -77,7 +77,7 @@ const featuredProjects = [
     date: "2023",
     image:
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80",
-    badge: { ar: "منجز", en: "Completed" },
+    badge: { ar: "مميز", en: "Featured" },
   },
   {
     id: 5,
