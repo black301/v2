@@ -213,12 +213,6 @@ export function FeaturedProjects() {
                     <span>{currentProject.date}</span>
                   </div>
                 </div>
-
-                {/* CTA Button */}
-                <button className="group inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-xl transition-all duration-300">
-                  {isRTL ? "عرض التفاصيل" : "View Details"}
-                  <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 rtl:group-hover:-translate-x-1" />
-                </button>
               </div>
 
               {/* Navigation */}
