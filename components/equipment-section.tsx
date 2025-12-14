@@ -1,37 +1,73 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Cog, Truck, Hammer } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "./language-context";
 import { cn } from "@/app/lib/utils";
 
 const equipment = [
   {
-    icon: Cog,
-    titleAr: "مضخات متطورة",
-    titleEn: "Advanced Pumps",
-    descAr: "مضخات عالية الكفاءة لسحب المياه الجوفية بأحدث التقنيات العالمية",
-    descEn:
-      "High-efficiency pumps for groundwater pumping using the latest global technologies",
-    color: "from-blue-500 to-cyan-500",
+    titleAr: "سيارات نقل خفيفة",
+    titleEn: "Pickup Trucks",
+    descAr: "سيارات نقل خفيفة مجهزة لخدمة مواقع العمل",
+    descEn: "Light pickup trucks equipped for site operations",
+    image: "/images/equipment/pickup.jpg",
   },
   {
-    icon: Truck,
-    titleAr: "لوادر حديثة",
-    titleEn: "Modern Loaders",
-    descAr: "لوادر حديثة لجميع أعمال البناء والتشييد مع قدرات تحميل عالية",
-    descEn:
-      "Modern loaders for all construction works with high loading capacities",
-    color: "from-amber-500 to-orange-500",
+    titleAr: "نقل متوسط",
+    titleEn: "Half Lorry Trucks",
+    descAr: "شاحنات نصف نقل لأعمال النقل الثقيلة",
+    descEn: "Medium-duty trucks for heavy transport",
+    image: "/images/equipment/half-lorry.jpg",
   },
   {
-    icon: Hammer,
-    titleAr: "حفارات تدعيم",
-    titleEn: "Reinforcement Excavators",
-    descAr: "حفارات متخصصة لأعمال التدعيم والحفر بأعلى مستويات الدقة والأمان",
-    descEn:
-      "Specialized excavators for reinforcement and drilling works with the highest levels of precision and safety",
-    color: "from-emerald-500 to-teal-500",
+    titleAr: "شاحنات بوم",
+    titleEn: "Boom Trucks",
+    descAr: "شاحنات مزودة برافعة لأعمال الرفع",
+    descEn: "Boom trucks with cranes for lifting operations",
+    image: "/images/equipment/boom.jpg",
+  },
+  {
+    titleAr: "ماكينات شد التربة",
+    titleEn: "Anchor Machines",
+    descAr: "ماكينات شد ودعم التربة – Casagrande C8",
+    descEn: "Soil anchoring machines – Casagrande C8",
+    image: "/images/equipment/anchor.jpg",
+  },
+  {
+    titleAr: "ماكينات حفر",
+    titleEn: "Drilling Machines",
+    descAr: "معدات حفر متطورة لأعمال الأساسات",
+    descEn: "Advanced drilling equipment for foundation works",
+    image: "/images/equipment/drilling.jpg",
+  },
+  {
+    titleAr: "مضخات المياه",
+    titleEn: "Dewatering Pumps",
+    descAr: "Sykes – Hudig – Geho – Varisco – Miller 6”",
+    descEn: "Sykes, Hudig, Geho, Varisco, Miller 6”",
+    image: "/images/equipment/pumps.jpg",
+  },
+  {
+    titleAr: "مضخة Geho ZD 900",
+    titleEn: 'Geho ZD 900 Pump – 6"',
+    descAr: "مضخة نزح مياه عالية الكفاءة بقطر 6 بوصة",
+    descEn: "High-efficiency dewatering pump – 6 inch",
+    image: "/images/equipment/geho-zd-900.jpg",
+  },
+  {
+    titleAr: "مضخة Miller",
+    titleEn: 'Miller Pump – 6"',
+    descAr: "مضخة نزح مياه قوية لمواقع العمل الثقيلة",
+    descEn: "Heavy-duty dewatering pump for construction sites",
+    image: "/images/equipment/miller-6.jpg",
+  },
+  {
+    titleAr: "مضخاتنا",
+    titleEn: "Our Pumps",
+    descAr: "Sykes، Hudig، Geho، Varisco، Miller - 6 بوصة",
+    descEn: 'Sykes, Hudig, Geho, Varisco, Miller – 6"',
+    image: "/images/equipment/OurPumps.jpg",
   },
 ];
 
@@ -41,65 +77,68 @@ export function EquipmentSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
+      (entries) =>
+        entries.forEach(
+          (entry) =>
+            entry.isIntersecting && entry.target.classList.add("visible")
+        ),
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll(".section-animate");
-    elements?.forEach((el) => observer.observe(el));
+    sectionRef.current
+      ?.querySelectorAll(".section-animate")
+      .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background">
+    <section ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16 section-animate">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            {t("معداتنا المتطورة", "Our Advanced Equipment")}
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            {t("معداتنا", "Our Equipment")}
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6" />
-          <p className="max-w-3xl mx-auto text-muted-foreground text-lg leading-relaxed">
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mb-6" />
+          <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
             {t(
-              "نمتلك أحدث المعدات والتقنيات التي تمكننا من تنفيذ مشاريعنا بكفاءة وجودة عالية.",
-              "We possess the latest equipment and technologies that enable us to execute our projects with high efficiency and quality."
+              "نمتلك مجموعة متكاملة من المعدات الحديثة لتنفيذ جميع أعمال التدعيم والحفر والنقل.",
+              "We own a full fleet of modern equipment for drilling, anchoring, pumping, and transportation."
             )}
           </p>
         </div>
 
-        {/* Equipment Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {equipment.map((item, index) => (
             <div
               key={index}
               className={cn(
-                "section-animate text-center p-8 bg-card rounded-2xl shadow-lg border border-border",
-                "hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                "section-animate bg-card rounded-2xl overflow-hidden border shadow-lg",
+                "hover:-translate-y-2 hover:shadow-xl transition-all"
               )}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div
-                className={cn(
-                  "w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 bg-gradient-to-br",
-                  item.color,
-                  "group-hover:scale-110 transition-transform"
-                )}
-              >
-                <item.icon className="w-10 h-10 text-white" />
+              {/* Image */}
+              <div className="relative h-56 w-full">
+                <Image
+                  src={item.image}
+                  alt={t(item.titleAr, item.titleEn)}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                {t(item.titleAr, item.titleEn)}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {t(item.descAr, item.descEn)}
-              </p>
+
+              {/* Content */}
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold mb-3">
+                  {t(item.titleAr, item.titleEn)}
+                </h3>
+                <p className="text-muted-foreground">
+                  {t(item.descAr, item.descEn)}
+                </p>
+              </div>
             </div>
           ))}
         </div>
