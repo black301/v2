@@ -16,8 +16,7 @@ const services = [
       "نقدم خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات المتطورة لضمان كفاءة وجودة عالية. نستخدم مضخات متطورة وأنظمة مراقبة ذكية.",
     descEn:
       "We provide groundwater pumping services with the latest equipment and advanced technologies to ensure high efficiency and quality.",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+    image: "/images/services/water.jpg",
   },
   {
     id: "reinforcement",
@@ -28,8 +27,7 @@ const services = [
       "نقوم بتدعيم المباني والمنشآت باستخدام أحدث تقنيات التدعيم والمواد عالية الجودة لضمان متانة وأمان المنشآت.",
     descEn:
       "We reinforce buildings and structures using the latest reinforcement technologies and high-quality materials to ensure durability and safety.",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
+    image: "/images/services/reinforcement.jpg",
   },
   {
     id: "drilling",
@@ -40,8 +38,7 @@ const services = [
       "نقدم خدمات حفر متخصصة تشمل حفر الآبار والأساسات باستخدام أحدث الآلات والمعدات المتطورة لضمان الدقة والسلامة.",
     descEn:
       "We provide specialized drilling services including well and foundation drilling using the latest advanced machinery and equipment.",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    image: "/images/services/drilling.jpg",
   },
   {
     id: "finishing",
@@ -52,8 +49,7 @@ const services = [
       "تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم بأفضل الأسعار وأعلى مستويات الدقة والاهتمام بالتفاصيل.",
     descEn:
       "High-quality finishes that achieve clients' vision and expectations at the best prices with precision and attention to detail.",
-    image:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80",
+    image: "/images/services/finishing.jpg",
   },
 ];
 

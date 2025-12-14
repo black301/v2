@@ -9,7 +9,6 @@ import {
   MapPin,
   ArrowUpRight,
 } from "lucide-react";
-
 const featuredProjects = [
   {
     id: 1,
@@ -19,10 +18,7 @@ const featuredProjects = [
       en: "Integrated residential project featuring 3 towers of 25 floors with full service facilities",
     },
     category: { ar: "إنشاءات", en: "Construction" },
-    location: {
-      ar: "الرياض، المملكة العربية السعودية",
-      en: "Riyadh, Saudi Arabia",
-    },
+    location: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
     date: "2024",
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
@@ -32,14 +28,11 @@ const featuredProjects = [
     id: 2,
     title: { ar: "مشروع الطرق السريعة", en: "Highway Infrastructure Project" },
     description: {
-      ar: "تطوير وتوسعة شبكة الطرق السريعة بطول 45 كيلومتر مع جسور ومعابر حديثة",
-      en: "Development and expansion of highway network spanning 45km with modern bridges and crossings",
+      ar: "تطوير وتوسعة شبكة الطرق السريعة بطول 45 كم مع جسور حديثة",
+      en: "Expansion of a 45 km highway network with modern bridges",
     },
     category: { ar: "بنية تحتية", en: "Infrastructure" },
-    location: {
-      ar: "جدة، المملكة العربية السعودية",
-      en: "Jeddah, Saudi Arabia",
-    },
+    location: { ar: "جدة، السعودية", en: "Jeddah, Saudi Arabia" },
     date: "2023",
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80",
@@ -49,14 +42,11 @@ const featuredProjects = [
     id: 3,
     title: { ar: "محطة معالجة المياه", en: "Water Treatment Plant" },
     description: {
-      ar: "محطة متطورة لمعالجة المياه بطاقة إنتاجية 500,000 متر مكعب يومياً",
-      en: "Advanced water treatment plant with capacity of 500,000 cubic meters daily",
+      ar: "محطة متطورة لمعالجة المياه بطاقة 500,000 م³ يومياً",
+      en: "Advanced water treatment plant with 500,000 m³/day capacity",
     },
     category: { ar: "مياه", en: "Water" },
-    location: {
-      ar: "الدمام، المملكة العربية السعودية",
-      en: "Dammam, Saudi Arabia",
-    },
+    location: { ar: "الدمام، السعودية", en: "Dammam, Saudi Arabia" },
     date: "2024",
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
@@ -66,14 +56,11 @@ const featuredProjects = [
     id: 4,
     title: { ar: "المدرسة الدولية", en: "International School Campus" },
     description: {
-      ar: "مجمع تعليمي متكامل يضم مدرسة دولية بسعة 2000 طالب مع مرافق رياضية",
-      en: "Comprehensive educational complex with international school for 2000 students and sports facilities",
+      ar: "مجمع تعليمي بسعة 2000 طالب مع مرافق رياضية",
+      en: "Educational campus for 2,000 students with sports facilities",
     },
     category: { ar: "تعليم", en: "Education" },
-    location: {
-      ar: "مكة المكرمة، المملكة العربية السعودية",
-      en: "Makkah, Saudi Arabia",
-    },
+    location: { ar: "مكة، السعودية", en: "Makkah, Saudi Arabia" },
     date: "2023",
     image:
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80",
@@ -81,19 +68,86 @@ const featuredProjects = [
   },
   {
     id: 5,
-    title: { ar: "المصنع الصناعي الكبير", en: "Large Industrial Factory" },
+    title: { ar: "مصنع صناعي ضخم", en: "Large Industrial Factory" },
     description: {
-      ar: "مصنع صناعي ضخم بمساحة 50,000 متر مربع مجهز بأحدث التقنيات",
-      en: "Massive industrial factory spanning 50,000 sqm equipped with latest technologies",
+      ar: "مصنع بمساحة 50,000 م² مجهز بأحدث التقنيات",
+      en: "50,000 sqm industrial factory with advanced technology",
     },
     category: { ar: "صناعي", en: "Industrial" },
-    location: {
-      ar: "ينبع، المملكة العربية السعودية",
-      en: "Yanbu, Saudi Arabia",
-    },
+    location: { ar: "ينبع، السعودية", en: "Yanbu, Saudi Arabia" },
     date: "2024",
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
+    badge: { ar: "مميز", en: "Featured" },
+  },
+  {
+    id: 6,
+    title: { ar: "مشروع نفق حضري", en: "Urban Tunnel Project" },
+    description: {
+      ar: "تنفيذ نفق حضري بطول 2 كم داخل المدينة",
+      en: "Construction of a 2 km urban tunnel",
+    },
+    category: { ar: "بنية تحتية", en: "Infrastructure" },
+    location: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
+    date: "2022",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    badge: { ar: "مميز", en: "Featured" },
+  },
+  {
+    id: 7,
+    title: { ar: "مستشفى تخصصي", en: "Specialized Hospital" },
+    description: {
+      ar: "مستشفى حديث بسعة 350 سرير",
+      en: "Modern hospital with 350 beds",
+    },
+    category: { ar: "صحي", en: "Healthcare" },
+    location: { ar: "المدينة، السعودية", en: "Madinah, Saudi Arabia" },
+    date: "2024",
+    image:
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&q=80",
+    badge: { ar: "مميز", en: "Featured" },
+  },
+  {
+    id: 8,
+    title: { ar: "مشروع إسكان حكومي", en: "Government Housing Project" },
+    description: {
+      ar: "تنفيذ 1200 وحدة سكنية",
+      en: "Construction of 1,200 residential units",
+    },
+    category: { ar: "إسكان", en: "Housing" },
+    location: { ar: "تبوك، السعودية", en: "Tabuk, Saudi Arabia" },
+    date: "2023",
+    image:
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80",
+    badge: { ar: "مميز", en: "Featured" },
+  },
+  {
+    id: 9,
+    title: { ar: "ميناء تجاري", en: "Commercial Port" },
+    description: {
+      ar: "تطوير أرصفة ومرافق ميناء تجاري",
+      en: "Development of commercial port facilities",
+    },
+    category: { ar: "موانئ", en: "Ports" },
+    location: { ar: "جازان، السعودية", en: "Jazan, Saudi Arabia" },
+    date: "2022",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    badge: { ar: "مميز", en: "Featured" },
+  },
+  {
+    id: 10,
+    title: { ar: "محطة طاقة شمسية", en: "Solar Power Plant" },
+    description: {
+      ar: "محطة طاقة شمسية بقدرة 300 ميجاوات",
+      en: "300 MW solar power plant",
+    },
+    category: { ar: "طاقة", en: "Energy" },
+    location: { ar: "القصيم، السعودية", en: "Qassim, Saudi Arabia" },
+    date: "2024",
+    image:
+      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1920&q=80",
     badge: { ar: "مميز", en: "Featured" },
   },
 ];
@@ -134,7 +188,7 @@ export function FeaturedProjects() {
             {isRTL ? "أعمالنا المتميزة" : "Our Excellence"}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            {isRTL ? "المشاريع المميزة" : "Featured Projects"}
+            {isRTL ? "مشاريعنا" : "Our Projects"}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {isRTL
