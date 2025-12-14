@@ -12,143 +12,197 @@ import {
 const featuredProjects = [
   {
     id: 1,
-    title: { ar: "مجمع الأبراج السكنية", en: "Residential Towers Complex" },
-    description: {
-      ar: "مشروع سكني متكامل يضم 3 أبراج بارتفاع 25 طابق مع مرافق خدمية متكاملة",
-      en: "Integrated residential project featuring 3 towers of 25 floors with full service facilities",
+    title: {
+      ar: "إنشاء وصيانة أبراج كهرباء الضغط العالي الصبية",
+      en: "High Voltage Power Towers Construction & Maintenance at Al-Subiya",
     },
-    category: { ar: "إنشاءات", en: "Construction" },
-    location: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة أبراج الكهرباء الضغط العالي في جزيرة بوبيان، يشمل سحب المياه الجوفية وإعادة تأهيل الأبراج",
+      en: "Project for construction and maintenance of high voltage power towers at Bubiyan Island, including groundwater extraction and tower rehabilitation",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: { ar: "جزيرة بوبيان، الكويت", en: "Bubiyan Island, Kuwait" },
+    date: "2025",
+    image: "/images/projects/1.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة السويدي", en: "Al-Suwaidi Company" },
   },
   {
     id: 2,
-    title: { ar: "مشروع الطرق السريعة", en: "Highway Infrastructure Project" },
-    description: {
-      ar: "تطوير وتوسعة شبكة الطرق السريعة بطول 45 كم مع جسور حديثة",
-      en: "Expansion of a 45 km highway network with modern bridges",
+    title: {
+      ar: "إصلاح وصيانة بايبات الماء محطة توليد الكهرباء الزور",
+      en: "Water Pipeline Maintenance at Al-Zour Power Plant",
     },
-    category: { ar: "بنية تحتية", en: "Infrastructure" },
-    location: { ar: "جدة، السعودية", en: "Jeddah, Saudi Arabia" },
-    date: "2023",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80",
+    description: {
+      ar: "مشروع لصيانة وإصلاح بايبات المياه في محطة توليد الكهرباء الزور، يشمل سحب المياه الجوفية وإعادة تأهيل الأنابيب",
+      en: "Project for maintenance and repair of water pipelines at Al-Zour Power Plant, including groundwater extraction and pipeline rehabilitation",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: { ar: "الزور، الكويت", en: "Al-Zour, Kuwait" },
+    date: "2025",
+    image: "/images/projects/2.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة الغانم", en: "Al-Ghanim Company" },
   },
   {
     id: 3,
-    title: { ar: "محطة معالجة المياه", en: "Water Treatment Plant" },
-    description: {
-      ar: "محطة متطورة لمعالجة المياه بطاقة 500,000 م³ يومياً",
-      en: "Advanced water treatment plant with 500,000 m³/day capacity",
+    title: {
+      ar: "إنشاء وصيانة المدرسة الابتدائية بنات",
+      en: "Construction & Maintenance of Girls' Primary School",
     },
-    category: { ar: "مياه", en: "Water" },
-    location: { ar: "الدمام، السعودية", en: "Dammam, Saudi Arabia" },
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة المدرسة الابتدائية للبنات في المنطقة الاستثمارية صباح الأحمد، يشمل التدعيم وسحب المياه",
+      en: "Project for construction and maintenance of the girls' primary school in Sabah Al-Ahmad Investment Area, including reinforcement and water extraction",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الاستثمارية صباح الأحمد، الكويت",
+      en: "Sabah Al-Ahmad Investment Area, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/3.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة الخرافي", en: "Al-Kharafi Company" },
   },
   {
     id: 4,
-    title: { ar: "المدرسة الدولية", en: "International School Campus" },
-    description: {
-      ar: "مجمع تعليمي بسعة 2000 طالب مع مرافق رياضية",
-      en: "Educational campus for 2,000 students with sports facilities",
+    title: {
+      ar: "إنشاء وصيانة المدرسة الابتدائية بنين",
+      en: "Construction & Maintenance of Boys' Primary School",
     },
-    category: { ar: "تعليم", en: "Education" },
-    location: { ar: "مكة، السعودية", en: "Makkah, Saudi Arabia" },
-    date: "2023",
-    image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة المدرسة الابتدائية للبنين في المنطقة الاستثمارية صباح الأحمد، يشمل التدعيم وسحب المياه",
+      en: "Project for construction and maintenance of the boys' primary school in Sabah Al-Ahmad Investment Area, including reinforcement and water extraction",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الاستثمارية صباح الأحمد، الكويت",
+      en: "Sabah Al-Ahmad Investment Area, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/4.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة الخرافي", en: "Al-Kharafi Company" },
   },
   {
     id: 5,
-    title: { ar: "مصنع صناعي ضخم", en: "Large Industrial Factory" },
-    description: {
-      ar: "مصنع بمساحة 50,000 م² مجهز بأحدث التقنيات",
-      en: "50,000 sqm industrial factory with advanced technology",
+    title: {
+      ar: "إنشاء وصيانة المستوصف ومخفر الشرطة (66 عمارة)",
+      en: "Construction & Maintenance of Clinic and Police Station (66 Buildings)",
     },
-    category: { ar: "صناعي", en: "Industrial" },
-    location: { ar: "ينبع، السعودية", en: "Yanbu, Saudi Arabia" },
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة المستوصف ومخفر الشرطة في المنطقة الاستثمارية صباح الأحمد، يشمل سحب المياه الجوفية",
+      en: "Project for construction and maintenance of the clinic and police station in Sabah Al-Ahmad Investment Area, including groundwater extraction",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الاستثمارية صباح الأحمد، الكويت",
+      en: "Sabah Al-Ahmad Investment Area, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/5.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة الخرافي", en: "Al-Kharafi Company" },
   },
   {
     id: 6,
-    title: { ar: "مشروع نفق حضري", en: "Urban Tunnel Project" },
-    description: {
-      ar: "تنفيذ نفق حضري بطول 2 كم داخل المدينة",
-      en: "Construction of a 2 km urban tunnel",
+    title: {
+      ar: "إنشاء وصيانة المدرسة المتوسطة بنات وبنين",
+      en: "Construction & Maintenance of Girls' and Boys' Middle School",
     },
-    category: { ar: "بنية تحتية", en: "Infrastructure" },
-    location: { ar: "الرياض، السعودية", en: "Riyadh, Saudi Arabia" },
-    date: "2022",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة المدرسة المتوسطة للبنات والبنين في المنطقة الاستثمارية صباح الأحمد تحت إشراف الهيئة العامة للإسكان",
+      en: "Project for construction and maintenance of the girls' and boys' middle school in Sabah Al-Ahmad Investment Area under the supervision of the Public Authority for Housing",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الاستثمارية صباح الأحمد، الكويت",
+      en: "Sabah Al-Ahmad Investment Area, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/6.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة الخرافي", en: "Al-Kharafi Company" },
   },
   {
     id: 7,
-    title: { ar: "مستشفى تخصصي", en: "Specialized Hospital" },
-    description: {
-      ar: "مستشفى حديث بسعة 350 سرير",
-      en: "Modern hospital with 350 beds",
+    title: {
+      ar: "إنشاء وتنفيذ وصيانة مركز سلطان",
+      en: "Construction, Implementation & Maintenance of Sultan Center",
     },
-    category: { ar: "صحي", en: "Healthcare" },
-    location: { ar: "المدينة، السعودية", en: "Madinah, Saudi Arabia" },
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وتنفيذ وصيانة مركز سلطان في المنطقة الصناعية بمدينة صباح الأحمد، يشمل جميع أعمال الصيانة والتشغيل",
+      en: "Project for construction, implementation, and maintenance of Sultan Center in the industrial area of Sabah Al-Ahmad City, including all operational and maintenance works",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الصناعية، مدينة صباح الأحمد، الكويت",
+      en: "Industrial Area, Sabah Al-Ahmad City, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/7.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة تيكو كونستركت", en: "Teco Construct Company" },
   },
   {
     id: 8,
-    title: { ar: "مشروع إسكان حكومي", en: "Government Housing Project" },
-    description: {
-      ar: "تنفيذ 1200 وحدة سكنية",
-      en: "Construction of 1,200 residential units",
+    title: {
+      ar: "إنشاء وتنفيذ وصيانة مبنى البلازا",
+      en: "Construction, Implementation & Maintenance of Plaza Building",
     },
-    category: { ar: "إسكان", en: "Housing" },
-    location: { ar: "تبوك، السعودية", en: "Tabuk, Saudi Arabia" },
-    date: "2023",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وتنفيذ وصيانة مبنى البلازا في المنطقة الصناعية بمدينة صباح الأحمد، يشمل الحفر والتدعيم وأعمال الصيانة المتكاملة",
+      en: "Project for construction, implementation, and maintenance of the Plaza Building in the industrial area of Sabah Al-Ahmad City, including excavation, reinforcement, and full maintenance works",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الصناعية، مدينة صباح الأحمد، الكويت",
+      en: "Industrial Area, Sabah Al-Ahmad City, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/8.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة تيكو كونستركت", en: "Teco Construct Company" },
   },
   {
     id: 9,
-    title: { ar: "ميناء تجاري", en: "Commercial Port" },
-    description: {
-      ar: "تطوير أرصفة ومرافق ميناء تجاري",
-      en: "Development of commercial port facilities",
+    title: {
+      ar: "إنشاء وتنفيذ وصيانة البنية التحتية والطرق",
+      en: "Construction, Implementation & Maintenance of Infrastructure and Roads",
     },
-    category: { ar: "موانئ", en: "Ports" },
-    location: { ar: "جازان، السعودية", en: "Jazan, Saudi Arabia" },
-    date: "2022",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وتنفيذ وصيانة البنية التحتية والطرق في المنطقة الصناعية بمدينة صباح الأحمد، يشمل الحفر والتدعيم وأعمال الصيانة المتكاملة",
+      en: "Project for construction, implementation, and maintenance of infrastructure and roads in the industrial area of Sabah Al-Ahmad City, including excavation, reinforcement, and full maintenance works",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "المنطقة الصناعية، مدينة صباح الأحمد، الكويت",
+      en: "Industrial Area, Sabah Al-Ahmad City, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/9.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة تيكو كونستركت", en: "Teco Construct Company" },
   },
   {
     id: 10,
-    title: { ar: "محطة طاقة شمسية", en: "Solar Power Plant" },
-    description: {
-      ar: "محطة طاقة شمسية بقدرة 300 ميجاوات",
-      en: "300 MW solar power plant",
+    title: {
+      ar: "إنشاء وصيانة مبنى مطعم كباب الحجة",
+      en: "Construction & Maintenance of Kebab Al-Hujjah Restaurant Building",
     },
-    category: { ar: "طاقة", en: "Energy" },
-    location: { ar: "القصيم، السعودية", en: "Qassim, Saudi Arabia" },
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1920&q=80",
+    description: {
+      ar: "مشروع إنشاء وصيانة مبنى مطعم كباب الحجة في منطقة الشعب البحري، يشمل الحفر والتدعيم وأعمال الصيانة المتكاملة",
+      en: "Project for construction and maintenance of Kebab Al-Hujjah Restaurant Building in Al-Shaab Al-Bahri area, including excavation, reinforcement, and full maintenance works",
+    },
+    category: { ar: "إنشاءات وصيانة", en: "Construction & Maintenance" },
+    location: {
+      ar: "منطقة الشعب البحري، الكويت",
+      en: "Al-Shaab Al-Bahri Area, Kuwait",
+    },
+    date: "2025",
+    image: "/images/projects/10.png",
     badge: { ar: "مميز", en: "Featured" },
+    contractor: { ar: "شركة يوسف الكوت", en: "Yousef Al-Kout Company" },
   },
 ];
 

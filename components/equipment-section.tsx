@@ -28,14 +28,14 @@ const equipment = [
     image: "/images/equipment/boom.jpg",
   },
   {
-    titleAr: "ماكينات شد التربة",
+    titleAr: "ماكينات شد الاناكر",
     titleEn: "Anchor Machines",
     descAr: "ماكينات شد ودعم التربة – Casagrande C8",
-    descEn: "Soil anchoring machines – Casagrande C8",
+    descEn: "Anchor machines – Casagrande C8",
     image: "/images/equipment/anchor.jpg",
   },
   {
-    titleAr: "ماكينات حفر",
+    titleAr: "ماكينات التدعيم",
     titleEn: "Drilling Machines",
     descAr: "معدات حفر متطورة لأعمال الأساسات",
     descEn: "Advanced drilling equipment for foundation works",
@@ -135,9 +135,6 @@ export function EquipmentSection() {
                 <h3 className="text-xl font-bold mb-3">
                   {t(item.titleAr, item.titleEn)}
                 </h3>
-                <p className="text-muted-foreground">
-                  {t(item.descAr, item.descEn)}
-                </p>
               </div>
             </div>
           ))}
