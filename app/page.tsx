@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/about-section";
 import { ServicesSection } from "@/components/services-section";
 import { EquipmentSection } from "@/components/equipment-section";
 import { FeaturedProjects } from "@/components/featured-projects";
-import { ProjectsSection } from "@/components/projects-section";
 import { MapSection } from "@/components/map-section";
 import { AdvantagesSection } from "@/components/advantages-section";
 import { ContactSection } from "@/components/contact-section";
@@ -21,7 +20,6 @@ export default function Home() {
       <ServicesSection />
       <EquipmentSection />
       <FeaturedProjects />
-      <ProjectsSection />
       <MapSection />
       <AdvantagesSection />
       <ContactSection />
