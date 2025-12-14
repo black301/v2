@@ -2,14 +2,14 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Droplets, HardHat, Drill, Paintbrush, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "./language-context";
 import { cn } from "@/app/lib/utils";
 
 const services = [
   {
     id: "water-pumping",
-    icon: Droplets,
+    icon: "/images/service-icons/water.png",
     titleAr: "سحب المياه الجوفية",
     titleEn: "Groundwater Pumping",
     descAr:
@@ -21,7 +21,7 @@ const services = [
   },
   {
     id: "reinforcement",
-    icon: HardHat,
+    icon: "/images/service-icons/reinforcement.png",
     titleAr: "أعمال التدعيم",
     titleEn: "Reinforcement Works",
     descAr:
@@ -33,7 +33,7 @@ const services = [
   },
   {
     id: "drilling",
-    icon: Drill,
+    icon: "/images/service-icons/drilling.png",
     titleAr: "أعمال الحفر",
     titleEn: "Drilling Works",
     descAr:
@@ -45,7 +45,7 @@ const services = [
   },
   {
     id: "finishing",
-    icon: Paintbrush,
+    icon: "/images/service-icons/finishing.png",
     titleAr: "التشطيبات",
     titleEn: "Finishing Works",
     descAr:
@@ -73,10 +73,7 @@ export function ServicesSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -90,13 +87,20 @@ export function ServicesSection() {
         {/* Section Header */}
         <div
           className={cn(
-            "text-center max-w-3xl mx-auto mb-16 md:mb-20 transition-all duration-1000",
+            "text-center max-w-4xl mx-auto mb-20 transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <span className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">
-            {t("خدماتنا", "Our Services")}
-          </span>
+          {/* 🔥 BIG خدماتنا */}
+          <div className="mb-6">
+            <p
+              className="text-accent font-extrabold uppercase tracking-widest
+                          text-3xl md:text-4xl lg:text-5xl leading-none inline-block"
+            >
+              {t("خدماتنا", "Our Services")}
+            </p>
+          </div>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance">
             {t(
               "حلول متكاملة لجميع احتياجات مشاريعكم",
@@ -105,9 +109,9 @@ export function ServicesSection() {
           </h2>
         </div>
 
-        {/* Services Grid - Tab Style */}
+        {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left Side - Service Tabs */}
+          {/* Left Tabs */}
           <div
             className={cn(
               "space-y-4 transition-all duration-1000 delay-200",
@@ -117,7 +121,6 @@ export function ServicesSection() {
             )}
           >
             {services.map((service, index) => {
-              const Icon = service.icon;
               const isActive = activeService === index;
 
               return (
@@ -134,23 +137,29 @@ export function ServicesSection() {
                 >
                   <div
                     className={cn(
-                      "flex items-center gap-4",
+                      "flex items-center gap-5",
                       language && "flex-row-reverse"
                     )}
                   >
-                    {/* Icon */}
+                    {/* 🔥 BIG ICON */}
                     <div
                       className={cn(
-                        "w-14 h-14 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500",
+                        "w-20 h-20 rounded-2xl flex items-center justify-center transition-all duration-500",
                         isActive
-                          ? "bg-accent text-white"
-                          : "bg-white/10 text-white/70 group-hover:bg-white/20"
+                          ? "bg-accent scale-110"
+                          : "bg-white/20 scale-95"
                       )}
                     >
-                      <Icon className="w-7 h-7" />
+                      <Image
+                        src={service.icon}
+                        alt=""
+                        width={42}
+                        height={42}
+                        quality={100}
+                        className={isActive ? "opacity-100" : "opacity-60"}
+                      />
                     </div>
 
-                    {/* Text */}
                     <div className="flex-1 min-w-0">
                       <h3
                         className={cn(
@@ -170,7 +179,6 @@ export function ServicesSection() {
                       </p>
                     </div>
 
-                    {/* Arrow */}
                     <ArrowRight
                       className={cn(
                         "w-5 h-5 shrink-0 transition-all duration-300",
@@ -186,7 +194,7 @@ export function ServicesSection() {
             })}
           </div>
 
-          {/* Right Side - Active Service Display */}
+          {/* Right Image */}
           <div
             className={cn(
               "relative transition-all duration-1000 delay-400",
@@ -196,7 +204,6 @@ export function ServicesSection() {
             )}
           >
             <div className="sticky top-24">
-              {/* Image Card */}
               <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl shadow-black/30">
                 {services.map((service, index) => (
                   <div
@@ -209,7 +216,7 @@ export function ServicesSection() {
                     )}
                   >
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image}
                       alt={t(service.titleAr, service.titleEn)}
                       fill
                       className="object-cover"
@@ -218,32 +225,12 @@ export function ServicesSection() {
                   </div>
                 ))}
 
-                {/* Content Overlay */}
                 <div
                   className={cn(
                     "absolute bottom-0 left-0 right-0 p-6 md:p-8",
                     language && "text-end"
                   )}
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    {services.map((service, index) => {
-                      const Icon = service.icon;
-                      return (
-                        <div
-                          key={service.id}
-                          className={cn(
-                            "w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500",
-                            activeService === index
-                              ? "bg-accent text-white scale-110"
-                              : "bg-white/20 text-white/60 scale-90"
-                          )}
-                        >
-                          <Icon className="w-5 h-5" />
-                        </div>
-                      );
-                    })}
-                  </div>
-
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
                     {t(
                       services[activeService].titleAr,
@@ -270,22 +257,6 @@ export function ServicesSection() {
                     />
                   </a>
                 </div>
-              </div>
-
-              {/* Service Counter */}
-              <div className="flex items-center justify-center gap-2 mt-6">
-                {services.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveService(index)}
-                    className={cn(
-                      "h-2 rounded-full transition-all duration-500",
-                      activeService === index
-                        ? "w-8 bg-accent"
-                        : "w-2 bg-white/30 hover:bg-white/50"
-                    )}
-                  />
-                ))}
               </div>
             </div>
           </div>
