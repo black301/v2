@@ -11,7 +11,7 @@ const services = [
     id: "water-pumping",
     icon: "/images/service-icons/water.png",
     titleAr: "سحب المياه الجوفية",
-    titleEn: "Groundwater Pumping",
+    titleEn: "Dewatering",
     descAr:
       "نقدم خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات المتطورة لضمان كفاءة وجودة عالية. نستخدم مضخات متطورة وأنظمة مراقبة ذكية.",
     descEn:
@@ -22,7 +22,7 @@ const services = [
     id: "reinforcement",
     icon: "/images/service-icons/reinforcement.png",
     titleAr: "أعمال التدعيم",
-    titleEn: "Reinforcement Works",
+    titleEn: "Shoring",
     descAr:
       "نقوم بتدعيم المباني والمنشآت باستخدام أحدث تقنيات التدعيم والمواد عالية الجودة لضمان متانة وأمان المنشآت.",
     descEn:
